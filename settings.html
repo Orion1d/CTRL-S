@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTRL-S Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="settings-container">
+        <header class="settings-header">
+            <div class="logo">
+                <span class="logo-text">CTRL-S Settings</span>
+            </div>
+        </header>
+
+        <main class="settings-content">
+
+
+            <section class="settings-section">
+                <h2>Clipboard Settings</h2>
+                <div class="setting-group">
+                    <label for="maxClipboardItems">Maximum clipboard items:</label>
+                    <input type="number" id="maxClipboardItems" class="setting-input" min="10" max="100" value="50">
+                </div>
+                <div class="setting-group">
+                    <label for="autoSaveClipboard">Automatically save copied text:</label>
+                    <div class="toggle-container">
+                        <button id="autoSaveClipboard" class="toggle-btn enabled" data-enabled="true">
+                            <span class="toggle-text">Enabled</span>
+                        </button>
+                    </div>
+                    <p class="setting-description">When enabled, all text you copy (Ctrl+C) will be automatically saved to your clipboard history.</p>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2>Data Management</h2>
+                <div class="setting-group">
+                    <button id="clearAllData" class="danger-btn">Clear All Data</button>
+                    <p class="setting-description">This will permanently delete all clipboard items and bookmarks.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="settings-footer">
+            <button id="saveSettings" class="primary-btn">Save Settings</button>
+            <button id="resetSettings" class="secondary-btn">Reset to Defaults</button>
+        </footer>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html> 

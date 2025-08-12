@@ -1,0 +1,8 @@
+/* Content Script Styles for CTRL-S Extension */
+
+/* Print styles - hide our elements when printing */
+@media print {
+    .ctrl-s-notification {
+        display: none !important;
+    }
+} 

@@ -1,0 +1,266 @@
+/* Settings Page Styles - Grain Textbook Design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #faf8f5;
+    color: #2c2c2c;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.settings-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #faf8f5;
+}
+
+/* Header */
+.settings-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e8e4e0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: #8b7355;
+    letter-spacing: -0.5px;
+}
+
+/* Content */
+.settings-content {
+    margin-bottom: 40px;
+}
+
+.settings-section {
+    background: #ffffff;
+    border: 1px solid #e8e4e0;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.settings-section h2 {
+    color: #5d4e37;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0ede8;
+}
+
+.setting-group {
+    margin-bottom: 28px;
+}
+
+.setting-group:last-child {
+    margin-bottom: 0;
+}
+
+.setting-group .setting-description {
+    margin-top: 12px;
+    margin-left: 38px;
+    color: #8b7355;
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.setting-group label {
+    display: block;
+    color: #6b5b47;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.setting-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e8e4e0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #2c2c2c;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.setting-input:focus {
+    outline: none;
+    border-color: #c4b5a0;
+    box-shadow: 0 0 0 3px rgba(196, 181, 160, 0.1);
+}
+
+.setting-input[type="number"] {
+    max-width: 200px;
+}
+
+/* Toggle Button */
+.toggle-container {
+    margin-top: 8px;
+}
+
+.toggle-btn {
+    padding: 12px 24px;
+    border: 2px solid #e8e4e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    min-width: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.toggle-btn.enabled {
+    background: #8b7355;
+    color: #ffffff;
+    border-color: #8b7355;
+    box-shadow: 0 2px 8px rgba(139, 115, 85, 0.25);
+}
+
+.toggle-btn.disabled {
+    background: #f5f2ed;
+    color: #8b7355;
+    border-color: #d4c9c0;
+}
+
+.toggle-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn.enabled:hover {
+    background: #7a6447;
+    border-color: #7a6447;
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.35);
+}
+
+.toggle-btn.disabled:hover {
+    background: #ebe6df;
+    border-color: #c4b5a0;
+}
+
+/* Buttons */
+.danger-btn {
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.danger-btn:hover {
+    background: #fee2e2;
+    border-color: #fca5a5;
+    transform: translateY(-1px);
+}
+
+.setting-description {
+    color: #a3957d;
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+/* Footer */
+.settings-footer {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding-top: 32px;
+    border-top: 2px solid #e8e4e0;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    border: none;
+}
+
+.primary-btn {
+    background: #8b7355;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background: #7a6447;
+    transform: translateY(-1px);
+}
+
+.secondary-btn {
+    background: rgba(139, 115, 85, 0.1);
+    color: #8b7355;
+    border: 1px solid rgba(139, 115, 85, 0.2);
+}
+
+.secondary-btn:hover {
+    background: rgba(139, 115, 85, 0.15);
+    border-color: rgba(139, 115, 85, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .settings-container {
+        padding: 20px 16px;
+    }
+    
+    .settings-section {
+        padding: 24px 20px;
+    }
+    
+    .settings-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .primary-btn, .secondary-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 24px;
+    }
+    
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .settings-section h2 {
+        font-size: 18px;
+    }
+} 

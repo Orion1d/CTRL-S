@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTRL-S</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <!-- Header -->
+                    <header class="header">
+                <div class="logo">
+                    <span class="logo-text">CTRL-S</span>
+                </div>
+            <button class="settings-btn" id="settingsBtn" title="Settings">
+                <img src="icons/settings.svg" alt="Settings" class="settings-icon">
+            </button>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="clipboard" id="clipboardTab">
+                <img src="icons/list.svg" alt="Clipboard" class="tab-icon">
+                <span>Clipboard</span>
+            </button>
+            <button class="tab-btn" data-tab="bookmarks" id="bookmarksTab">
+                <img src="icons/bookmark.svg" alt="Bookmarks" class="tab-icon">
+                <span>Bookmarks</span>
+            </button>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <img src="icons/search.svg" alt="Search" class="search-icon">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search clipboard items...">
+                <button id="clearSearch" class="clear-search-btn" style="display: none;">
+                    <img src="icons/close.svg" alt="Clear" class="clear-icon">
+                </button>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <main class="content">
+            <!-- Clipboard Section -->
+            <section class="section active" id="clipboardSection">
+                <div class="section-header">
+                    <div class="section-title">
+                        <span class="section-count" id="clipboardCount">0</span>
+                        <span>Recent Copies</span>
+                    </div>
+                    <div class="section-actions">
+                        <button class="action-btn secondary" id="clearAllClipboard" title="Clear All">
+                            <img src="icons/trash.svg" alt="Clear All" class="action-icon">
+                            Clear All
+                        </button>
+                    </div>
+                </div>
+                <div class="items-container" id="clipboardItems">
+                    <div class="empty-state" id="clipboardEmptyState">
+                        <img src="icons/clipboard-empty.svg" alt="No items" class="empty-icon">
+                        <p>No clipboard items yet</p>
+                        <span>Copy some text to see it here</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bookmarks Section -->
+            <section class="section" id="bookmarksSection">
+                <div class="section-header">
+                    <div class="section-title">
+                        <span class="section-count" id="bookmarksCount">0</span>
+                        <span>Saved Bookmarks</span>
+                    </div>
+                    <div class="section-actions">
+                        <button class="action-btn secondary" id="clearAllBookmarks" title="Clear All">
+                            <img src="icons/trash.svg" alt="Clear All" class="action-icon">
+                            Clear All
+                        </button>
+                    </div>
+                </div>
+                <div class="items-container" id="bookmarksItems">
+                    <div class="empty-state" id="bookmarksEmptyState">
+                        <img src="icons/bookmark-empty.svg" alt="No bookmarks" class="empty-icon">
+                        <p>No bookmarks yet</p>
+                        <span>Bookmark items to save them here</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html> 
